@@ -142,4 +142,4 @@ logger.info('info')
 
 # Image 
 
-![](2021-08-23-11-03-10.png)
+![](https://raw.githubusercontent.com/typicalninja493/discord-winston/master/images/2021-08-23-11-03-10.png)
