@@ -82,7 +82,7 @@ logger.info('hey')
 
 > Image 
 
-![](images/2021-08-22-13-50-56.png)
+![](https://raw.githubusercontent.com/typicalninja493/discord-winston/master/images/2021-08-22-13-50-56.png)
 
 
 ## Log with Error stack trace
@@ -94,7 +94,7 @@ logger.error('A Error occurred', { error: new Error() })
 > Image
 
 
-![](images/2021-08-22-13-52-41.png)
+![](https://raw.githubusercontent.com/typicalninja493/discord-winston/master/images/2021-08-22-13-52-41.png)
 
 
 > `error` value can be replaced with a error variable from a `try-catch` or a `catch`
@@ -107,3 +107,39 @@ logger.error(`A Error occurred, ${err}`, {
     postToDiscord: false,
 })
 ```
+
+
+## Changing the color of embed
+
+> **See the default value for colors above**
+
+```js
+const winston = require('winston');
+const discordTransport = require('@typicalninja21/discord-winston');
+
+const logger = winston.createLogger({
+'transports': [
+        new winston.transports.File({
+            filename: `logs/new.log`,
+        }),
+        new winston.transports.Console(),
+        new discordTransport({
+            id: '78948458726857225', // example id
+            token: 'dBwb4zNZGGUBgSkaqqWOHULVc_st6LJTvjLgvCIc__A7bW2jwMfunh8R6zR5dllao', // example token
+            colors: {
+                warn: 10001011 //#8b0000
+            },      
+          }),
+    ],
+    // ... rest of your code
+});
+
+
+logger.warn('warn')
+logger.error('error')
+logger.info('info')
+```
+
+# Image 
+
+![](2021-08-23-11-03-10.png)

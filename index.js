@@ -47,6 +47,7 @@ module.exports = class DiscordWebhookTransport extends Transport {
   }
 
   log(info, callback) {
+    console.log(info.message)
       if(info.postToDiscord == false) return callback();
         this.postToWebhook(info);
         return callback();
