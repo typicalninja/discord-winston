@@ -1,0 +1,17 @@
+{
+  "name": "@typicalninja21/discord-winston",
+  "version": "1.0.0",
+  "description": "winston transport to log to discord using webhooks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "node-fetch": "^2.6.1",
+    "winston": "^3.3.3",
+    "winston-transport": "^4.4.0"
+  }
+}
